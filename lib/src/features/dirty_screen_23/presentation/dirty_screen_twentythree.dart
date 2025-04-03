@@ -1,6 +1,11 @@
+import 'package:dirty_code/src/features/dirty_screen_23/presentation/DownloadingContainer.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenTwentyThree extends StatelessWidget {
+  final String title = 'Downloading File';
+  final double progress = 0.5;
+  final String status = '50% completed';
+
   const DirtyScreenTwentyThree({super.key});
 
   @override
@@ -12,92 +17,50 @@ class DirtyScreenTwentyThree extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.all(16.0),
-              padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                color: Colors.blue[50],
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Downloading File 1',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 8),
-                  LinearProgressIndicator(value: 0.5),
-                  SizedBox(height: 8),
-                  Text('50% completed',
-                      style: TextStyle(fontSize: 16, color: Colors.grey)),
-                ],
-              ),
+            DownloadingContainer(
+              title: title,
+              progress: progress,
+              status: status,
             ),
-            Container(
-              margin: const EdgeInsets.all(16.0),
-              padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                color: Colors.blue[50],
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Downloading File 2',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 8),
-                  LinearProgressIndicator(value: 0.8),
-                  SizedBox(height: 8),
-                  Text('80% completed',
-                      style: TextStyle(fontSize: 16, color: Colors.grey)),
-                ],
-              ),
+            DownloadingContainer(
+              title: 'Downloading File 2',
+              progress: 0.8,
+              status: '80% completed',
             ),
-            Container(
-              margin: const EdgeInsets.all(16.0),
-              padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                color: Colors.blue[50],
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Downloading File 3',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 8),
-                  LinearProgressIndicator(value: 0.3),
-                  SizedBox(height: 8),
-                  Text('30% completed',
-                      style: TextStyle(fontSize: 16, color: Colors.grey)),
-                ],
-              ),
+            DownloadingContainer(
+              title: 'Downloading File 3',
+              progress: 0.3,
+              status: '30% completed',
+            ),
+            DownloadingContainer(
+              title: 'Downloading File 1',
+              progress: 0.5,
+              status: '50% completed',
+            ),
+            DownloadingContainer(
+              title: 'Downloading File 2',
+              progress: 0.8,
+              status: '80% completed',
+            ),
+            DownloadingContainer(
+              title: 'Downloading File 3',
+              progress: 0.3,
+              status: '30% completed',
+            ),
+            DownloadingContainer(
+              title: 'Downloading File 1',
+              progress: 0.5,
+              status: '50% completed',
+            ),
+            DownloadingContainer(
+              title: 'Downloading File 2',
+              progress: 0.8,
+              status: '80% completed',
+            ),
+            DownloadingContainer(
+              title: 'Downloading File 3',
+              progress: 0.3,
+              status: '30% completed',
             ),
           ],
         ),
